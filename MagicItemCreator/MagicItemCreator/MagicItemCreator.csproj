@@ -36,7 +36,9 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Creators\WeaponCreation.cs" />
     <Compile Include="CustomTypes\MagicItem.cs" />
+    <Compile Include="CustomTypes\MagicWeapon.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="CustomTypes\Interval.cs" />
     <Compile Include="Helpers\Dices.cs" />
@@ -45,6 +47,7 @@
     <Compile Include="Tables\MagicItemTableLine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tables\TableLine.cs" />
+    <Compile Include="Tables\WeaponTableLine.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
