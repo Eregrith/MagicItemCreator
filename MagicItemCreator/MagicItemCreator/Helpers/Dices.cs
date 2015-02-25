@@ -23,7 +23,7 @@ namespace MagicItemCreator.Helpers
 
         public static int d100()
         {
-            return DiceGenerator.Next(1, 100);
+            return DiceGenerator.Next(1, 101); //entre 1 et 100, le max est non-inclus
         }
     }
 }

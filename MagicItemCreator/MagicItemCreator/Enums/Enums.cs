@@ -5,10 +5,12 @@ using System.Text;
 
 namespace MagicItemCreator.Enums
 {
-    //Type d'objet, Table: Random Magic Item Generation
+    //Type d'objet précis : Epee longue ? bouclier ?
     public enum ItemType
     {
-        ArmorAndShield,
+        //Types generiques, avant les types
+        Armor,
+        Shield,
         Weapon,
         //à completer ...
     }
@@ -18,5 +20,11 @@ namespace MagicItemCreator.Enums
         Minor,
         Medium,
         Major,
+    }
+
+    public enum Range
+    {
+        Melee,
+        Ranged
     }
 }

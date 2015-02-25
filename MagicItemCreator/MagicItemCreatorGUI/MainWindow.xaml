@@ -4,7 +4,8 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Button Content="Create Weapon" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="Auto" Click="Button_Click"/>
-        <TextBlock x:Name="itemDisplay" HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="274" Width="497"/>
-
+        <ScrollViewer Margin="10,35,10,10">
+            <TextBlock x:Name="itemDisplay" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="Auto" Width="497"/>
+        </ScrollViewer>
     </Grid>
 </Window>

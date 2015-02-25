@@ -13,6 +13,9 @@ namespace MagicItemCreator.Creators
     {
         public static List<MagicItemTableLine> MagicItemsTable { get; set; }
 
+        //Type d'arme (utilisé si on cree une arme) : Melee ou distance
+        public static Range ChosenRange { get; set; }
+
         static MagicItemCreation()
         {
             InitMagicItemsTable();
@@ -22,8 +25,8 @@ namespace MagicItemCreator.Creators
         {
             MagicItemsTable = new List<MagicItemTableLine>
             {
-                new MagicItemTableLine { Minor = new Interval(1, 4), Medium = new Interval(1, 10), Major = new Interval(1, 10), Item = ItemType.ArmorAndShield, Create = ArmorCreation.Create },
-                new MagicItemTableLine { Minor = new Interval(5, 9), Medium = new Interval(11, 20), Major = new Interval(11, 20), Item = ItemType.Weapon, Create = WeaponCreation.Create },
+                new MagicItemTableLine { Minor = new Interval( 1,   4), Medium = new Interval( 1,  10), Major = new Interval( 1,  10), Create = ArmorCreation.Create },
+                new MagicItemTableLine { Minor = new Interval( 5,   9), Medium = new Interval(11,  20), Major = new Interval(11,  20), Create = WeaponCreation.Create },
                 //à compléter ...
             };
         }
@@ -34,7 +37,7 @@ namespace MagicItemCreator.Creators
 
             int de = Dices.d100();
 
-            MagicItemTableLine ligne = (MagicItemTableLine)MagicItemsTable.GetLineFromDice(de, quality);
+            MagicItemTableLine ligne = MagicItemsTable.GetLineFromDice(de, quality);
 
             item = ligne.Create(quality);
 

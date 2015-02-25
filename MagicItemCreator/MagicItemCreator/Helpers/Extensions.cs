@@ -9,7 +9,7 @@ namespace MagicItemCreator.Helpers
 {
     public static class Extensions
     {
-        public static TableLine GetLineFromDice<T>(this List<T> table, int dice, ItemQuality quality) where T : TableLine
+        public static T GetLineFromDice<T>(this List<T> table, int dice, ItemQuality quality) where T : TableLine
         {
             return table.Single(ligne =>
                 {
@@ -24,6 +24,11 @@ namespace MagicItemCreator.Helpers
                     }
                     return false;
                 });
+        }
+
+        public static WeaponTableLine GetLineFromAlterationBonus(this List<WeaponTableLine> table, int alterationBonus)
+        {
+            return table.Single(ligne => ligne.AlterationBonus == alterationBonus);
         }
     }
 }

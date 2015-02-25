@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicItemCreatorGUI", "MagicItemCreatorGUI\MagicItemCreatorGUI.csproj", "{DE525C61-5794-4CF5-9E83-E6A12F009256}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicItemCreator", "MagicItemCreator\MagicItemCreator.csproj", "{44E4D9B5-85C3-463E-A026-EB5D26E334A4}"
@@ -30,6 +32,7 @@ Global
 		{44E4D9B5-85C3-463E-A026-EB5D26E334A4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{44E4D9B5-85C3-463E-A026-EB5D26E334A4}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{44E4D9B5-85C3-463E-A026-EB5D26E334A4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{44E4D9B5-85C3-463E-A026-EB5D26E334A4}.Debug|x86.Build.0 = Debug|Any CPU
 		{44E4D9B5-85C3-463E-A026-EB5D26E334A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44E4D9B5-85C3-463E-A026-EB5D26E334A4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{44E4D9B5-85C3-463E-A026-EB5D26E334A4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
