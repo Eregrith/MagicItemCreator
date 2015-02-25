@@ -1,5 +1,6 @@
 ﻿using MagicItemCreator.CustomTypes;
 using MagicItemCreator.Enums;
+using MagicItemCreator.Creators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,8 +29,7 @@ namespace MagicItemCreator
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MagicItemCreator mic = new MagicItemCreator();
-            MagicItem item = mic.CreateItem(ItemType.Weapon, ItemQuality.Minor);
+            MagicItem item = MagicItemCreation.Create(ItemQuality.Minor);
 
             itemDisplay.Text = item.ToString();
         }

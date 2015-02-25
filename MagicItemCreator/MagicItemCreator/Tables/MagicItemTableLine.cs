@@ -12,5 +12,8 @@ namespace MagicItemCreator.Tables
     public class MagicItemTableLine : TableLine
     {
         public ItemType Item { get; set; }
+        
+        public delegate MagicItem CreateFunction(ItemQuality quality);
+        public CreateFunction Create { get; set; }
     }
 }
