@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicItemCreatorGUI", "Magi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicItemCreator", "MagicItemCreator\MagicItemCreator.csproj", "{44E4D9B5-85C3-463E-A026-EB5D26E334A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{D7F18801-7DA6-4481-8230-883AD0478B04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,16 @@ Global
 		{44E4D9B5-85C3-463E-A026-EB5D26E334A4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{44E4D9B5-85C3-463E-A026-EB5D26E334A4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{44E4D9B5-85C3-463E-A026-EB5D26E334A4}.Release|x86.ActiveCfg = Release|Any CPU
+		{D7F18801-7DA6-4481-8230-883AD0478B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7F18801-7DA6-4481-8230-883AD0478B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7F18801-7DA6-4481-8230-883AD0478B04}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D7F18801-7DA6-4481-8230-883AD0478B04}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D7F18801-7DA6-4481-8230-883AD0478B04}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D7F18801-7DA6-4481-8230-883AD0478B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7F18801-7DA6-4481-8230-883AD0478B04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7F18801-7DA6-4481-8230-883AD0478B04}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D7F18801-7DA6-4481-8230-883AD0478B04}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D7F18801-7DA6-4481-8230-883AD0478B04}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
