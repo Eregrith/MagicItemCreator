@@ -26,7 +26,7 @@ namespace MagicItemCreator.Helpers
                 });
         }
 
-        public static WeaponTableLine GetLineFromAlterationBonus(this List<WeaponTableLine> table, int alterationBonus)
+        public static AbstractWeaponTableLine GetLineFromAlterationBonus(this List<AbstractWeaponTableLine> table, int alterationBonus)
         {
             return table.Single(ligne => ligne.AlterationBonus == alterationBonus);
         }

@@ -13,5 +13,10 @@ namespace MagicItemCreator.CustomTypes
         { }
 
         public int AlterationBonus { get; set; }
+
+        public override string ToString()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

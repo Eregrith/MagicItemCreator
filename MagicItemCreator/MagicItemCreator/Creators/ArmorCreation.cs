@@ -13,7 +13,7 @@ namespace MagicItemCreator.Creators
     {
         public static List<ArmorAndShieldsTableLine> ArmorAndShieldsTable { get; set; }
         public static List<SpecificArmorTableLine> SpecificArmorTable { get; set; }
-        public static List<SpecificShieldTableLine> SpecificShieldTable { get; set; }
+        //public static List<SpecificShieldTableLine> SpecificShieldTable { get; set; }
 
         static ArmorCreation()
         {
