@@ -1,5 +1,6 @@
 ﻿using MagicItemCreator.Enums;
 using MagicItemCreator.Tables;
+using MagicItemCreator.Tables.Weapons;
 using System;
 using System.Collections.Generic;
 using System.Linq;
