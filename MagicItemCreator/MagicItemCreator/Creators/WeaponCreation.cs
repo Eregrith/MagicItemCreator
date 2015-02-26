@@ -40,7 +40,7 @@ namespace MagicItemCreator.Creators
 
         public static MagicWeapon Create(ItemQuality quality)
         {
-            int de = Dices.d100();
+            int de = MagicItemCreation.Instance.Dices.d100();
 
             AbstractWeaponTableLine ligne = WeaponsTable.GetLineFromDice(de, quality);
 

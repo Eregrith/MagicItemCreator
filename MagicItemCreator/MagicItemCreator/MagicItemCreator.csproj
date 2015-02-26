@@ -76,6 +76,7 @@
     <Compile Include="Helpers\Dices.cs" />
     <Compile Include="Helpers\Extensions.cs" />
     <Compile Include="Creators\MagicItemCreation.cs" />
+    <Compile Include="Interfaces\IDices.cs" />
     <Compile Include="Tables\ArmorAndShields\ArmorAndShieldSpecialAbilitiesTableLine.cs" />
     <Compile Include="Tables\ArmorAndShields\ArmorAndShieldsTableLine.cs" />
     <Compile Include="Tables\ArmorAndShields\GetArmorOrShieldWithAbilityTableLine.cs" />

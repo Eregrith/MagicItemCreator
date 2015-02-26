@@ -26,10 +26,10 @@ namespace MagicItemCreator.Tables.Weapons
         {
             MagicWeapon item = new MagicWeapon(quality);
 
-            item.Range = MagicItemCreation.ChosenRange;
+            item.Range = MagicItemCreation.Instance.ChosenRange;
             item.AlterationBonus = this.AlterationBonus;
             item.Price = this.Price;
-            item.Range = MagicItemCreation.ChosenRange;
+            item.Range = MagicItemCreation.Instance.ChosenRange;
             item.Type = ItemType.Weapon;
 
             return item;

@@ -51,7 +51,7 @@ namespace MagicItemCreator.Creators
         
         public static MagicArmorAndShield Create(ItemQuality quality)
         {
-            int de = Dices.d100();
+            int de = MagicItemCreation.Instance.Dices.d100();
 
             AbstractArmorAndShieldsTableLine ligne = ArmorAndShieldsTable.GetLineFromDice(de, quality);
 

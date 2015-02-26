@@ -1,4 +1,5 @@
-﻿using MagicItemCreator.CustomTypes;
+﻿using MagicItemCreator.Creators;
+using MagicItemCreator.CustomTypes;
 using MagicItemCreator.Helpers;
 using System;
 using System.Collections.Generic;
@@ -33,7 +34,7 @@ namespace MagicItemCreator.Tables.ArmorAndShields
 
         public override MagicArmorAndShield Create(Enums.ItemQuality quality)
         {
-            int de = Dices.d100();
+            int de = MagicItemCreation.Instance.Dices.d100();
 
             SpecificArmorAndShieldTableLine ligne = SpecificShieldTable.GetLineFromDice(de, quality);
 

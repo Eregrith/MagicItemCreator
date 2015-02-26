@@ -88,7 +88,7 @@ namespace MagicItemCreator.Tables.Weapons
             AbstractWeaponTableLine secondRoll;
             do
             {
-                int alteration = Dices.d100();
+                int alteration = MagicItemCreation.Instance.Dices.d100();
 
                 secondRoll = WeaponCreation.WeaponsTable.GetLineFromDice(alteration, quality);
             } while (secondRoll.GetType() != typeof(WeaponTableLine)); //On reroll tant qu'on a pas trouvé une ligne qu'on peut utiliser en tant que deuxième roll (si Create existe c'est un cas spécial et donc on ne peut pas l'utiliser)
@@ -98,13 +98,13 @@ namespace MagicItemCreator.Tables.Weapons
             //On ne devrait pas avoir de cas speciaux au deuxieme roll
             baseWeapon.AlterationBonus = secondRoll.AlterationBonus;
             baseWeapon.Type = ItemType.Weapon;
-            baseWeapon.Range = MagicItemCreation.ChosenRange;
+            baseWeapon.Range = MagicItemCreation.Instance.ChosenRange;
 
             //2. Ajout de capa speciale
             //Roll sur la table des capa melee
-            if (MagicItemCreation.ChosenRange == Range.Melee)
+            if (MagicItemCreation.Instance.ChosenRange == Range.Melee)
             {
-                int capa = Dices.d100();
+                int capa = MagicItemCreation.Instance.Dices.d100();
 
                 WeaponSpecialAbilitiesTableLine ligne = MeleeWeaponSpecialAbilitiesTable.GetLineFromDice(capa, quality);
 
@@ -118,7 +118,7 @@ namespace MagicItemCreator.Tables.Weapons
             }
             else //Roll sur la table des capa distance
             {
-                int capa = Dices.d100();
+                int capa = MagicItemCreation.Instance.Dices.d100();
 
                 WeaponSpecialAbilitiesTableLine ligne = RangedWeaponSpecialAbilitiesTable.GetLineFromDice(capa, quality);
 
@@ -139,7 +139,7 @@ namespace MagicItemCreator.Tables.Weapons
 
         private static void RollMeleeAbilityTwice(MagicWeapon baseWeapon)
         {
-            int abilityRoll = Dices.d100();
+            int abilityRoll = MagicItemCreation.Instance.Dices.d100();
 
             WeaponSpecialAbilitiesTableLine firstAbility = MeleeWeaponSpecialAbilitiesTable.GetLineFromDice(abilityRoll, baseWeapon.Quality);
 
@@ -152,7 +152,7 @@ namespace MagicItemCreator.Tables.Weapons
             WeaponSpecialAbilitiesTableLine secondAbility;
             do
             {
-                abilityRoll = Dices.d100();
+                abilityRoll = MagicItemCreation.Instance.Dices.d100();
 
                 secondAbility = MeleeWeaponSpecialAbilitiesTable.GetLineFromDice(abilityRoll, baseWeapon.Quality);
 
@@ -167,7 +167,7 @@ namespace MagicItemCreator.Tables.Weapons
 
         private static void RollRangedAbilityTwice(MagicWeapon baseWeapon)
         {
-            int abilityRoll = Dices.d100();
+            int abilityRoll = MagicItemCreation.Instance.Dices.d100();
 
             WeaponSpecialAbilitiesTableLine firstAbility = RangedWeaponSpecialAbilitiesTable.GetLineFromDice(abilityRoll, baseWeapon.Quality);
 
@@ -180,7 +180,7 @@ namespace MagicItemCreator.Tables.Weapons
             WeaponSpecialAbilitiesTableLine secondAbility;
             do
             {
-                abilityRoll = Dices.d100();
+                abilityRoll = MagicItemCreation.Instance.Dices.d100();
 
                 secondAbility = RangedWeaponSpecialAbilitiesTable.GetLineFromDice(abilityRoll, baseWeapon.Quality);
 

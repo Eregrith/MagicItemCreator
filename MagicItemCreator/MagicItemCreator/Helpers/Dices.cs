@@ -1,11 +1,12 @@
-﻿using System;
+﻿using MagicItemCreator.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace MagicItemCreator.Helpers
 {
-    public static class Dices
+    public class Dices : IDices
     {
         #region random init
 
@@ -21,7 +22,7 @@ namespace MagicItemCreator.Helpers
         }
         #endregion
 
-        public static int d100()
+        public int d100()
         {
             return DiceGenerator.Next(1, 101); //entre 1 et 100, le max est non-inclus
         }

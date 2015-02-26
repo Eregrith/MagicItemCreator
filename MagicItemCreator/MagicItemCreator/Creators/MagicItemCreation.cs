@@ -1,6 +1,7 @@
 ﻿using MagicItemCreator.CustomTypes;
 using MagicItemCreator.Enums;
 using MagicItemCreator.Helpers;
+using MagicItemCreator.Interfaces;
 using MagicItemCreator.Tables;
 using System;
 using System.Collections.Generic;
@@ -9,19 +10,44 @@ using System.Text;
 
 namespace MagicItemCreator.Creators
 {
-    public static class MagicItemCreation
+    public class MagicItemCreation
     {
-        public static List<MagicItemTableLine> MagicItemsTable { get; set; }
+        public List<MagicItemTableLine> MagicItemsTable { get; set; }
 
-        //Type d'arme (utilisé si on cree une arme) : Melee ou distance
-        public static Range ChosenRange { get; set; }
-
-        static MagicItemCreation()
+        private MagicItemCreation()
         {
             InitMagicItemsTable();
+            Dices = new Dices();
         }
 
-        private static void InitMagicItemsTable()
+        private static MagicItemCreation _instance;
+        public static MagicItemCreation Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new MagicItemCreation();
+                return _instance;
+            }
+        }
+
+        public static void Instantiate(IDices dicesDependency)
+        {
+            _instance = new MagicItemCreation(dicesDependency);
+        }
+
+        //Type d'arme (utilisé si on cree une arme) : Melee ou distance
+        public Range ChosenRange { get; set; }
+
+        public IDices Dices { get; set; }
+
+        public MagicItemCreation(IDices dices)
+        {
+            InitMagicItemsTable();
+            Dices = dices;
+        }
+
+        private void InitMagicItemsTable()
         {
             MagicItemsTable = new List<MagicItemTableLine>
             {
@@ -31,7 +57,7 @@ namespace MagicItemCreator.Creators
             };
         }
 
-        public static MagicItem Create(ItemQuality quality)
+        public MagicItem Create(ItemQuality quality)
         {
             MagicItem item;
 

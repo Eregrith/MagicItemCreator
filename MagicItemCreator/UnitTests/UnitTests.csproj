@@ -58,8 +58,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="BasicTests\UnitTest1.cs" />
+    <Compile Include="BasicTests\BasicTests.cs" />
+    <Compile Include="ErrorManagement\UnitTestingException.cs" />
+    <Compile Include="MockObjects\MockDices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeaponsTests\BasicWeaponTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MagicItemCreator\MagicItemCreator.csproj">
@@ -70,6 +73,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

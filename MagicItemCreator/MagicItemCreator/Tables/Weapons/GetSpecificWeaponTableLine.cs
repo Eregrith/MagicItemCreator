@@ -1,4 +1,5 @@
-﻿using MagicItemCreator.CustomTypes;
+﻿using MagicItemCreator.Creators;
+using MagicItemCreator.CustomTypes;
 using MagicItemCreator.Enums;
 using MagicItemCreator.Helpers;
 using System;
@@ -63,7 +64,7 @@ namespace MagicItemCreator.Tables.Weapons
         {
             MagicWeapon item = new MagicWeapon(quality);
 
-            int de = Dices.d100();
+            int de = MagicItemCreation.Instance.Dices.d100();
 
             SpecificWeaponTableLine ligne = SpecificWeaponsTable.GetLineFromDice(de, quality);
 

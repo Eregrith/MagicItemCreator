@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MagicItemCreator.Helpers;
 
 namespace MagicItemCreator
 {
@@ -30,17 +31,16 @@ namespace MagicItemCreator
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //Si on tombe sur une arme, on veut une melee
-
             ItemQuality quality;
             Random r = new Random();
             int i = r.Next(1, 3);
             switch (i)
             {
                 case 1:
-                    MagicItemCreation.ChosenRange = Range.Melee;
+                    MagicItemCreation.Instance.ChosenRange = Range.Melee;
                     break;
                 case 2:
-                    MagicItemCreation.ChosenRange = Range.Ranged;
+                    MagicItemCreation.Instance.ChosenRange = Range.Ranged;
                     break;
                 default:
                     quality = ItemQuality.Medium;

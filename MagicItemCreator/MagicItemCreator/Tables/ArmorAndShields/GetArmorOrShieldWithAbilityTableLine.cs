@@ -83,7 +83,7 @@ namespace MagicItemCreator.Tables.ArmorAndShields
             AbstractArmorAndShieldsTableLine secondRoll;
             do
             {
-                int alteration = Dices.d100();
+                int alteration = MagicItemCreation.Instance.Dices.d100();
 
                 secondRoll = ArmorCreation.ArmorAndShieldsTable.GetLineFromDice(alteration, quality);
             } while (secondRoll.GetType() != typeof(ArmorTableLine)
@@ -97,7 +97,7 @@ namespace MagicItemCreator.Tables.ArmorAndShields
 
             //2. Ajout de capa speciale
             //Roll sur la table des capa melee
-            int capa = Dices.d100();
+            int capa = MagicItemCreation.Instance.Dices.d100();
             ArmorAndShieldSpecialAbilitiesTableLine ligne;
 
             if (baseArmorAndShield.Type == Enums.ItemType.Armor)
@@ -123,7 +123,7 @@ namespace MagicItemCreator.Tables.ArmorAndShields
 
         private static void RollShieldAbilityTwice(MagicArmorAndShield baseArmorAndShield)
         {
-            int abilityRoll = Dices.d100();
+            int abilityRoll = MagicItemCreation.Instance.Dices.d100();
 
             ArmorAndShieldSpecialAbilitiesTableLine firstAbility = ShieldSpecialAbilitiesTable.GetLineFromDice(abilityRoll, baseArmorAndShield.Quality);
 
@@ -137,7 +137,7 @@ namespace MagicItemCreator.Tables.ArmorAndShields
             ArmorAndShieldSpecialAbilitiesTableLine secondAbility;
             do
             {
-                abilityRoll = Dices.d100();
+                abilityRoll = MagicItemCreation.Instance.Dices.d100();
 
                 secondAbility = ShieldSpecialAbilitiesTable.GetLineFromDice(abilityRoll, baseArmorAndShield.Quality);
 
@@ -164,7 +164,7 @@ namespace MagicItemCreator.Tables.ArmorAndShields
 
         private static void RollArmorAbilityTwice(MagicArmorAndShield baseArmorAndShield)
         {
-            int abilityRoll = Dices.d100();
+            int abilityRoll = MagicItemCreation.Instance.Dices.d100();
 
             ArmorAndShieldSpecialAbilitiesTableLine firstAbility = ArmorSpecialAbilitiesTable.GetLineFromDice(abilityRoll, baseArmorAndShield.Quality);
 
@@ -178,7 +178,7 @@ namespace MagicItemCreator.Tables.ArmorAndShields
             ArmorAndShieldSpecialAbilitiesTableLine secondAbility;
             do
             {
-                abilityRoll = Dices.d100();
+                abilityRoll = MagicItemCreation.Instance.Dices.d100();
 
                 secondAbility = ArmorSpecialAbilitiesTable.GetLineFromDice(abilityRoll, baseArmorAndShield.Quality);
 
