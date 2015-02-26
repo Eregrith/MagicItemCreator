@@ -11,7 +11,7 @@ namespace MagicItemCreator.Tables.Weapons
     {
         //For normal abilities
         public String Name { get; set; }
-        public int BasePriceModifier { get; set; }
+        public int BaseAlterationModifier { get; set; }
 
         //For special case(s)
         public delegate void ModificationFuction(MagicWeapon baseWeapon);

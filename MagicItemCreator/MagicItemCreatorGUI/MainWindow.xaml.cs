@@ -63,7 +63,12 @@ namespace MagicItemCreator
                     break;
             }
 
-            MagicItem item = WeaponCreation.Create(quality);
+            MagicItem item;
+
+            if (r.Next(1, 3) == 1)
+                item = WeaponCreation.Create(quality);
+            else
+                item = ArmorCreation.Create(quality);
 
             itemDisplay.Text += item.ToString() + Environment.NewLine;
         }
