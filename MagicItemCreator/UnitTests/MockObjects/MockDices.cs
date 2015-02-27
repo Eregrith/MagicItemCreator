@@ -16,6 +16,7 @@ namespace UnitTests.MockObjects
 
         public MockDices(List<int> preparedRolls)
         {
+            currentRoll = 0;
             DiceRolls = preparedRolls;
         }
 

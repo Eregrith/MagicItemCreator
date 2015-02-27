@@ -149,6 +149,9 @@ namespace MagicItemCreator.Tables.Weapons
             baseWeapon.Abilities.Add(firstAbility.Name);
             baseWeapon.BasePriceModifier = firstAbility.BaseAlterationModifier;
 
+            if (baseWeapon.BasePriceModifier + baseWeapon.AlterationBonus == 10) //arme +5 avec vorpal
+                return;
+
             WeaponSpecialAbilitiesTableLine secondAbility;
             do
             {
@@ -176,6 +179,9 @@ namespace MagicItemCreator.Tables.Weapons
 
             baseWeapon.Abilities.Add(firstAbility.Name);
             baseWeapon.BasePriceModifier = firstAbility.BaseAlterationModifier;
+
+            if (baseWeapon.BasePriceModifier + baseWeapon.AlterationBonus == 10) //arme +5 avec vorpal
+                return;
 
             WeaponSpecialAbilitiesTableLine secondAbility;
             do
