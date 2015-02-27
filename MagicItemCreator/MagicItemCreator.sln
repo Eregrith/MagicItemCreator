@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicItemCreator", "MagicIt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{D7F18801-7DA6-4481-8230-883AD0478B04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableParser", "TableParser\TableParser.csproj", "{CDD748CB-CF56-49A4-8920-740933CF1736}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,17 @@ Global
 		{D7F18801-7DA6-4481-8230-883AD0478B04}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{D7F18801-7DA6-4481-8230-883AD0478B04}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{D7F18801-7DA6-4481-8230-883AD0478B04}.Release|x86.ActiveCfg = Release|Any CPU
+		{CDD748CB-CF56-49A4-8920-740933CF1736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD748CB-CF56-49A4-8920-740933CF1736}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD748CB-CF56-49A4-8920-740933CF1736}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CDD748CB-CF56-49A4-8920-740933CF1736}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CDD748CB-CF56-49A4-8920-740933CF1736}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CDD748CB-CF56-49A4-8920-740933CF1736}.Debug|x86.Build.0 = Debug|Any CPU
+		{CDD748CB-CF56-49A4-8920-740933CF1736}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD748CB-CF56-49A4-8920-740933CF1736}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD748CB-CF56-49A4-8920-740933CF1736}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CDD748CB-CF56-49A4-8920-740933CF1736}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CDD748CB-CF56-49A4-8920-740933CF1736}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
